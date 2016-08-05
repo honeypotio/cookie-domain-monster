@@ -1,0 +1,22 @@
+{
+  "name": "cookie-domain-monster",
+  "version": "0.0.1",
+  "description": "Utility function for extracting cookie domain from a list of hosts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/honeypotio/cookie-domain-monster.git"
+  },
+  "keywords": [
+    "brownies"
+  ],
+  "author": "Hugo Duksis & Jacek Bandura",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/honeypotio/cookie-domain-monster/issues"
+  },
+  "homepage": "https://github.com/honeypotio/cookie-domain-monster#readme"
+}
