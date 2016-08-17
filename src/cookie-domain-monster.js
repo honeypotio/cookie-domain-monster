@@ -1,30 +1,33 @@
-// asd.dfg.honeypot.io
+const _removePortAndProtocol = (url) => {
+  const reg = /http(|s):\/\//i;
+  return url.replace(reg,'').replace(/:[0-9]{4}/i, '');
+};
 
-const uniqueElements = (arr) => {
-  return arr.filter((elem, pos, arr) => {
-    return arr.indexOf(elem) == pos;
+const _zip = (array, otherArray) => {
+  return array.map((el, index) => [el, otherArray[index]]);
+};
+
+const _uniq = (array) => [ ...new Set(array) ];
+const _disassemble = (str) => str.split('.').reverse();
+const _assemble = (str) => str.reverse().join('.');
+
+const _commonPart = (url, otherUrl) => {
+  const [ that, other ] = [url, otherUrl].map(_disassemble);
+  return _assemble(_uniq(_zip(that, other).map(([a, b]) => a === b ? a : null)));
+};
+
+export default function (urls) {
+  const hosts = urls.map((url) => {
+    return _removePortAndProtocol(url);
   });
-};
-
-const doStuff = (elem1, elem2) => {
-  // elem1: [io, honeypot, www]
-  const aggregate = [];
-  elem1.forEach((elem) => {
-    const index = elem1.indexOf(elem);
-    if (elem1 === elem2[index]) {
-      aggregate.push(elem1);
-    } else {
-      return;
-    }
-  });
-  return aggregate;
-};
-
-export default (strings) => {
-  const stringList = Array.isArray(strings) ? strings : [strings];
-  return stringList.map((string) => {
-    const tokenList = string.replace(/https?\:\/\//, '').split('.').reverse();
-  }).reduce((elem1, elem2) => {
-    doStuff(elem1, elem2)
-  }, []);
-};
+  if (hosts.length < 2) {
+   return hosts;
+  }
+  const domain = hosts.slice(1).reduce((el, acc) => {
+    return _commonPart(acc, el);
+  }, hosts[0]);
+  if (domain.length === 0) {
+   return hosts;
+  }
+  return [domain];
+}
