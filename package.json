@@ -1,8 +1,8 @@
 {
   "name": "cookie-domain-monster",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Utility function for extracting cookie domain from a list of hosts",
-  "main": "./lib/cookie-domain-monster.js",
+  "main": "./index.js",
   "scripts": {
     "build": "babel src -d lib",
     "prepublish": "npm run build",
