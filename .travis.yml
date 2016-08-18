@@ -1,0 +1,9 @@
+language: node_js
+deploy:
+  provider: npm
+  email: admin@honeypot.io
+  api_key:
+    secure: Y2p33YbS7QzR8BIE7rInxHnhClYA3Bt7Omohu4hTQ5dgi7m406KuBXF7CunIGU84+D7XTzujicMIBey0RcfFY9IN/JniAwwqiIiYh6JKkcxfwMHoAf3Gxsv1/4UxQTcOoQsaFwp3B9JS1mwAUIQC3x+z7vDCuHq2tVp3ABbPdu93+D0BiSveexhPmmRKsY3EC/Y7hfO8XI6eswCuLqJAJ8lLl2Hbp/03fdhUi9wLsOCQMJRrIB/EK80sStwNNIkh7oFj5dwn1IqrFvUnKRkjhBAJ5tHH5nqKHK/72XxMvPf44snhNwDH+/JqV/deGwWR2qacTiHIDG5OnnMxq3KSdy+ByU/k62HyKrBUFR5BxVbR4bZHlphk6CeFKniuRzzwCq/Z3S6YCmxX6I5D5EtgTCALNVBtI2+lqVIwuAJvmIwdOWaGdsI+aEFgYF0hgoPVb2AS8dc87oFurOtfLE5H86Fu8gABpN4i84Yd8CbfoA61paLROuRfVjkRpjojGCp2UuxAuoSaf6iHCy2INDVjdmv0+WAI1pasRXx5VBa7QGjQyxx7+hQQBZgyday++PK8/9izRM8G86730xONO1g5JLpkddRYBpN+WqZokZ+CgSLSG9nj03WZyOZdVPDZ1ANsZ2Ag7jLndqga3w5obVwd0vMbXrAacUKBGKOqRLExHQQ=
+  on:
+    tags: true
+    repo: honeypotio/cookie-domain-monster-js
