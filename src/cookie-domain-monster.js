@@ -7,7 +7,10 @@ const _zip = (array, otherArray) => {
   return array.map((el, index) => [el, otherArray[index]]);
 };
 
-const _uniq = (array) => [ ...new Set(array) ];
+const _uniq = (array) => {
+  return array.filter( (value, index, self) => self.indexOf(value) === index );
+};
+
 const _disassemble = (str) => str.split('.').reverse();
 const _assemble = (str) => str.reverse().join('.');
 
