@@ -1,6 +1,6 @@
 {
   "name": "cookie-domain-monster",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Utility function for extracting cookie domain from a list of hosts",
   "main": "./index.js",
   "scripts": {
