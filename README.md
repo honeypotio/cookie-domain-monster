@@ -2,7 +2,7 @@ cookie-domain-monster
 =============
 [![Build Status](https://travis-ci.org/honeypotio/cookie-domain-monster.svg)][travis]
 
-A library that extracts high level cookie domains from a list of urls
+A library that extracts high level cookie domains from a list of urls. Useful in cases where you want to set a cookie for several subdomains to guarantee it's set at the highest possible domain/subdomain while still available in all subdomains provided.
 
 
 Install
